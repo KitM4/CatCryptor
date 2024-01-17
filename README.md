@@ -24,6 +24,6 @@
    1. Serilog.AspNetCore (8.0.0)
    2. xUnit (2.4.2)
    3. Moq (4.20.70)
-3. **Install CatCryptor.WebApp as a project to run.**
+3. **Set CatCryptor.WebApp as startup project.**
 4. **Run the project.**
 5. **Run 'CatCryptor.WebSite/html/index.html' on the host "http://127.0.0.1:5500".**
