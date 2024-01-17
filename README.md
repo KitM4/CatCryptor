@@ -3,7 +3,7 @@
 <h3>CatCryptor is a simple ASP.NET Core Web API project that provides the ability to encrypt files using the AES algorithm.</h3> 
 
 # Preview:
-<img src="https://github.com/KitM4/CatCryptor/blob/master/Resources/CatCryptorSiteDemo.png" alt="Demonstration of the CatCryptor web service" width="680"/>
+<img src="https://github.com/KitM4/CatCryptor/blob/master/Resources/CatCryptorSiteDemo.png" alt="Demonstration of the CatCryptor web service" width="1080"/>
 
 # Technology:
 * **.NET 8**
