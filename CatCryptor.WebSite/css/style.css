@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #1f1f1f;
+}
+
+.navigation-bar {
+    width: 100%;
+    padding: 25px;
+    font-size: 25px;
+    letter-spacing: 6px;
+    color: white;
+    text-align: left;
+    background-color: #161616;
+    font-family: "Cascadia Code", monospace;
+}
+
+.operations-bar {
+    top: 20px;
+    width: 30px;
+    right: 350px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    color: white;
+    border: 3px solid #b3b3b3;
+    border-right: none;
+    position: relative;
+    background-color: transparent;
+}
+
+.operations-bar p {
+    top: 18px;
+    left: 20px;
+    width: 250px;
+    position: relative;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.operation-button {
+    top: 18px;
+    left: 40px;
+    width: 80%;
+    height: 60%;
+    flex: 0 0 180px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: "Cascadia Code", monospace;
+    border: 1.5px solid white;
+}
+
+.encrypt-button {
+    color: #1f1f1f;
+    background-color: white;
+}
+
+.decrypt-button {
+    color: white;
+    background-color: #1f1f1f;
+}
+
+.work-space {
+    top: 40px;
+    width: 30px;
+    height: 550px;
+    right: 350px;
+    margin: auto;
+    display: block;
+    border: 3px solid #b3b3b3;
+    border-right: none;
+    position: relative;
+    background-color: transparent;
+}
+
+.work-space h1 {
+    left: 20px;
+    width: 250px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    white-space: nowrap;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.work-space p {
+    left: 20px;
+    width: 250px;
+    color: #b3b3b3;
+    position: relative;
+    white-space: nowrap;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.file-drop-panel {
+    top: 119px;
+    left: 18px;
+    width: 540px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #161616;
+}
+
+.file-drop-panel img {
+    pointer-events: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.file-drop-panel-over {
+    border-style: solid;
+  }
+
+.encrypting-file-drop-input {
+    display: none;
+}
+
+.decrypting-file-drop-input {
+    display: none;
+}
+
+.file-drop-panel-thumb {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #161616;
+    background-size: cover;
+    position: relative;
+}
+  
+.file-drop-panel-thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    background: black;
+    font-size: 14px;
+    text-align: center;
+}
+
+.password-input {
+    top: 205px;
+    left: 18px;
+    width: 530px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    caret-color: white;
+    letter-spacing: 1px;
+    transition: .1s linear;
+    font-weight: bold;
+    background-color: #b3b3b3;
+    border-bottom: 2px solid #1f1f1f;
+    font-family: 'Inconsolata', monospace;
+}
+  
+.password-input:focus {
+    color: #1f1f1f;
+    caret-color: #1f1f1f;
+    border-bottom: 2px solid white;
+}
+  
+.password-input:focus::placeholder {
+    color: #1f1f1f;
+}
+
+.execute-encrypting-button {
+    top: 225px;
+    left: 185px;
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    color: white;
+    font-size: 16px;
+    background-color: #1f1f1f;
+    font-family: "Cascadia Code", monospace;
+    border: 2px solid white;
+}
+
+.execute-decrypting-button {
+    top: 225px;
+    left: 185px;
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    color: white;
+    font-size: 16px;
+    background-color: #1f1f1f;
+    font-family: "Cascadia Code", monospace;
+    border: 2px solid white;
+}
+
+.binary-decoration {
+    top: 1px;
+    right: 280px;
+    width: 550px;
+    height: 100%;
+    opacity: 0.03;
+    z-index: -1;
+    position: fixed;
+    overflow: hidden;
+}
+
+.binary-text {
+    height: 200px;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #b3b3b3;
+    text-align: right;
+    white-space: normal;
+    font-family: "Cascadia Code", monospace;
+}
+
+.loading-animation {
+    top: 180px;
+    left: 480px;
+    font-size: 28px;
+    display: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    font-family: 'Inconsolata', monospace;
+}
+
+.vertical-path-title {
+    right: 55px;
+    bottom: 1750px;
+    color: white;
+    position: relative;
+    white-space: nowrap;
+    transform-origin: right;
+    transform: rotate(-90deg);
+    font-family: 'Inconsolata', monospace;
+}
+
+.log-title {
+    top: 60px;
+    width: 250px;
+    right: 240px;
+    margin: auto;
+    color: #b3b3b3;
+    position: relative;
+    white-space: nowrap;
+    font-size: 16px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.about-bar {
+    width: 100%;
+    height: 350px;
+    margin-top: 6.5%;
+    text-align: left;
+    white-space: nowrap;
+    background-color: #161616;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.about-bar h1 {
+    top: 20px;
+    left: 120px;
+    font-size: 40px;
+    color: white;
+    position: relative;
+}
+
+.info-container {
+    left: 120px;
+    width: 1100px;
+    height: 200px;
+    padding-left: 30px;
+    padding-top: 2px;
+    position: relative;
+    font-weight: bold;
+    color: #161616;
+    background-color: #b3b3b3;
+    font-family: 'Inconsolata', monospace;
+}
+
+.icon-container {
+    gap: 20px;
+    width: 180px;
+    bottom: 50px;
+    display: flex;
+    margin-left: auto;
+    position: relative;
+    align-items: center;
+}
+
+.icon-container img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#aes-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#about-description-title {
+    left: 120px;
+    color: #b3b3b3;
+    position: relative;
+}

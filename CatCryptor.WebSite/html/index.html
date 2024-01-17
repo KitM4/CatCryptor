@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CatCryptor | File encryption service</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="navigation-bar">Cat:\Cryptor</div>
+        
+        <div class="operations-bar">
+            <p>Choose an operation:</p>
+            <button class="operation-button encrypt-button" onclick="onEncryptTabClick()">Encrypt</button>
+            <button class="operation-button decrypt-button" onclick="onDecryptTabClick()">Decrypt</button>
+        </div>
+
+        <div class="work-space" id="encrypt-tab">
+            <h1>Encrypting the file_</h1>
+            <p>[drag & drop a file of any format or click on the field (max 100 MB)]</p>
+
+            <div class="file-drop-panel">
+                <img src="../resources/icons/upload-file-icon.png">
+                <input type="file" name="Choose file" class="encrypting-file-drop-input">
+            </div>
+
+            <input type="password" id="encrypt-password-input" class="password-input" placeholder="Enter your password">
+            <input type="password" id="confirm-password-input" class="password-input" placeholder="Confirm password">
+            <button class="execute-encrypting-button" onclick="onExecuteEncryptingClick()">Execute encrypting</button>
+            <div class="loading-animation encrypt-loading-animation"></div>
+        </div>
+
+        <div class="work-space" id="decrypt-tab" style="display: none;">
+            <h1>Decrypting the file_</h1>
+            <p>[drag & drop a file of '.crpt' format or click on the field (max 100 MB)]</p>
+
+            <div class="file-drop-panel">
+                <img src="../resources/icons/upload-file-icon.png">
+                <input type="file" name="Choose file" class="decrypting-file-drop-input">
+            </div>
+
+            <input type="password" id="decrypt-password-input" class="password-input" placeholder="Enter the password">
+            <button class="execute-decrypting-button" onclick="onExecuteDecryptingClick()">Execute decrypting</button>
+            <div class="loading-animation decrypt-loading-animation"></div>
+        </div>
+
+        <div class="binary-decoration">
+            <div class="binary-text">
+                01001000 01100101 01101100 01101100 01101111 00100001 00100000 01011001 01101111 01110101 00100000
+                01110111 01100101 01110010 01100101 00100000 01110000 01110010 01101111 01100010 01100001 01100010
+                01101100 01111001 00100000 01110111 01101111 01101110 01100100 01100101 01110010 01101001 01101110
+                01100111 00100000 01101001 01100110 00100000 01110100 01101000 01101001 01110011 00100000 01101001
+                01110011 00100000 01101010 01110101 01110011 01110100 00100000 01100001 00100000 01100100 01100101
+                01100011 01101111 01110010 01100001 01110100 01101001 01110110 01100101 00100000 01100010 01101001
+                01101110 01100001 01110010 01111001 00100000 01100011 01101111 01100100 01100101 00111111 00100000
+                01001001 00100000 01110111 01100001 01110011 00100000 01101010 01110101 01110011 01110100 00100000
+                01110100 01101111 01101111 00100000 01101100 01100001 01111010 01111001 00100000 01110100 01101111
+                00100000 01100101 01101110 01110100 01100101 01110010 00100000 01100010 01101001 01101110 01100001
+                01110010 01111001 00100000 01100011 01101111 01100100 01100101 00100000 01101101 01100001 01101110
+                01110101 01100001 01101100 01101100 01111001 00101100 00100000 01110011 01101111 00100000 01001001
+                00100000 01110111 01110010 01101111 01110100 01100101 00100000 01110100 01101000 01101001 01110011
+                00100000 01101101 01100101 01110011 01110011 01100001 01100111 01100101 00100000 00111010 01000100
+            </div>
+        </div>
+        
+        <p class="vertical-path-title">0x1223 ██████████████████ Cat:\Cryptor\Encrypt</p>
+        <p class="log-title">cat:\cryptor></p>
+
+        <div class="about-bar">
+            <h1>About this service_</h1>
+            <p id="about-description-title">[this service encrypts files of any format using the
+                <a id="aes-link" href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">AES algorithm</a>]
+            </p>
+            <div class="info-container">
+                <p>The CatCryptor web service provides a convenient and secure way to manage your files:</p>
+                <ul>
+                    <li>Upload your files and protect them with a password - only you can decrypt and view them.</li>
+                    <li>When you need access to an encrypted file, just enter the correct password and the service will decrypt it for you.</li>
+                    <li>Your information remains private and secure.</li>
+                </ul>
+                <p>Easy to use: This web service is designed to be easy to use. Just select the files, set the password.</p>
+                <p>CatCryptor - ensure the security and privacy of your files!</p>
+            </div>
+
+            <div class="icon-container">
+                <a href="https://github.com/KitM4" target="_blank"> <!--TODO: paste link on github repository-->
+                    <img src="../resources/icons/github-icon.png" alt="GitHub Icon">
+                </a>
+                <a href="https://telegram.me/test" target="_blank"> <!--TODO: paste link on real profile-->
+                    <img src="../resources/icons/telegram-icon.png" alt="Telegram Icon">
+                </a>
+            </div>
+        </div>
+
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>
