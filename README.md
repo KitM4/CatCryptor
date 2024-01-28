@@ -4,6 +4,7 @@
 
 # Preview:
 <img src="https://github.com/KitM4/CatCryptor/blob/master/Resources/CatCryptorSiteDemo.png" alt="Demonstration of the CatCryptor web service" width="1080"/>
+Project demo: https://www.youtube.com/watch?v=E4_6SHRoJLs
 
 # Technology:
 * **.NET 8**
