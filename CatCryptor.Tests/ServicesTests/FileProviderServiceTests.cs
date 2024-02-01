@@ -35,23 +35,6 @@ public class FileProviderServiceTests
     }
 
     [Fact]
-    public async Task UploadingLargeFile_Forbidden()
-    {
-        // Arrange
-        const long largeFileSize = 150 * 1024 * 1024;
-
-        Mock<IFormFile> fileMock = new();
-        fileMock.Setup(x => x.FileName).Returns("large_test.txt");
-        fileMock.Setup(x => x.Length).Returns(largeFileSize);
-        fileMock.Setup(x => x.OpenReadStream()).Returns(new MemoryStream(new byte[largeFileSize]));
-
-        FileProviderService fileProviderService = new(_configuration);
-
-        // Act & Assert
-        await Assert.ThrowsAsync<ArgumentOutOfRangeException>(() => fileProviderService.UploadFile(fileMock.Object));
-    }
-
-    [Fact]
     public void DownloadFile_ReturnsFileStreamResultWhenFileExists()
     {
         // Arrange

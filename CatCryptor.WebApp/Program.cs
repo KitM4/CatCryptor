@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowCatCryptorOrigin", builder =>
+    options.AddPolicy("CatCryptorLocalhostOrigin", builder =>
     {
         builder
             .WithOrigins("http://127.0.0.1:5500")
@@ -35,7 +35,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowCatCryptorOrigin");
+app.UseCors("CatCryptorLocalhostOrigin");
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseAuthorization();

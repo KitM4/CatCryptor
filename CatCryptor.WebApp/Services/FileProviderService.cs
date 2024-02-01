@@ -9,7 +9,6 @@ namespace CatCryptor.WebApp.Services;
 public class FileProviderService(IConfiguration configuration)
 {
     private readonly string _uploadedFilesPath = configuration.GetValue<string>("UploadedFilesPath") ?? Path.Combine(Directory.GetCurrentDirectory(), "_uploads");
-    private readonly long _maxFileWeight = configuration.GetValue<long>("MaxFileWeight");
 
     /// <summary>
     /// Uploads a file to the service.
@@ -18,9 +17,6 @@ public class FileProviderService(IConfiguration configuration)
     /// <returns>A task representing the asynchronous operation, returning the filename of the uploaded file.</returns>
     public async Task<string> UploadFile(IFormFile file)
     {
-        if (file.Length > _maxFileWeight)
-            throw new ArgumentOutOfRangeException("File size exceeds 100 megabytes");
-
         CheckUploadsDirectory();
 
         string fileName = Path.GetFileName(file.FileName);
