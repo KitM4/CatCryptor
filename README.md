@@ -1,4 +1,4 @@
-# CatCryptor: ASP.NET Core Web API for file encryption
+# `CatCryptor - a web service for file encryption🔑📄`
 
 <h3>CatCryptor is a simple ASP.NET Core Web API project that provides the ability to encrypt files using the AES algorithm.</h3> 
 
